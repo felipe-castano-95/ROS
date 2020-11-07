@@ -1,0 +1,5 @@
+<launch>
+	<node pkg="rqt_console" name="rqt_console" type="rqt_console"/>
+	<node pkg="rqt_logger_level" name="rqt_logger_level" type="rqt_logger_level"/>
+	<node pkg="turtlensim" name="my_turtle" type="tutlesim_node"/>
+</launch>

@@ -1,0 +1,8 @@
+prefix=/headless/ros_ws/devel
+
+Name: harderingros
+Description: Description of harderingros
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
