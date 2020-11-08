@@ -67,14 +67,14 @@ set(harderingros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(harderingros_SOURCE_PREFIX /headless/ros_ws/src/harderingros)
-  set(harderingros_DEVEL_PREFIX /headless/ros_ws/devel)
+  set(harderingros_SOURCE_PREFIX /home/student/catkin_ws/src/harderingros)
+  set(harderingros_DEVEL_PREFIX /home/student/catkin_ws/devel)
   set(harderingros_INSTALL_PREFIX "")
   set(harderingros_PREFIX ${harderingros_DEVEL_PREFIX})
 else()
   set(harderingros_SOURCE_PREFIX "")
   set(harderingros_DEVEL_PREFIX "")
-  set(harderingros_INSTALL_PREFIX /headless/ros_ws/install)
+  set(harderingros_INSTALL_PREFIX /home/student/catkin_ws/install)
   set(harderingros_PREFIX ${harderingros_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /headless/ros_ws/install/lib;/headless/ros_ws/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/student/catkin_ws/install/lib;/home/student/catkin_ws/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

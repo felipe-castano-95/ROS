@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /headless/ros_ws/install/setup.sh
+    local-name: /home/student/catkin_ws/install/setup.sh

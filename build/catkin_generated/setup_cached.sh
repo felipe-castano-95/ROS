@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/headless/ros_ws/build"
+export PWD='/home/student/catkin_ws/build'

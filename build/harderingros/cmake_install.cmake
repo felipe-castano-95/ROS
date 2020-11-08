@@ -1,8 +1,8 @@
-# Install script for directory: /headless/ros_ws/src/harderingros
+# Install script for directory: /home/student/catkin_ws/src/harderingros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/headless/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/student/catkin_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,17 +33,17 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/headless/ros_ws/build/harderingros/catkin_generated/installspace/harderingros.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/student/catkin_ws/build/harderingros/catkin_generated/installspace/harderingros.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/harderingros/cmake" TYPE FILE FILES
-    "/headless/ros_ws/build/harderingros/catkin_generated/installspace/harderingrosConfig.cmake"
-    "/headless/ros_ws/build/harderingros/catkin_generated/installspace/harderingrosConfig-version.cmake"
+    "/home/student/catkin_ws/build/harderingros/catkin_generated/installspace/harderingrosConfig.cmake"
+    "/home/student/catkin_ws/build/harderingros/catkin_generated/installspace/harderingrosConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/harderingros" TYPE FILE FILES "/headless/ros_ws/src/harderingros/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/harderingros" TYPE FILE FILES "/home/student/catkin_ws/src/harderingros/package.xml")
 endif()
 

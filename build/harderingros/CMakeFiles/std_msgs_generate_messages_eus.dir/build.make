@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /headless/ros_ws/src
+CMAKE_SOURCE_DIR = /home/student/catkin_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /headless/ros_ws/build
+CMAKE_BINARY_DIR = /home/student/catkin_ws/build
 
 # Utility rule file for std_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ harderingros/CMakeFiles/std_msgs_generate_messages_eus.dir/build: std_msgs_gener
 .PHONY : harderingros/CMakeFiles/std_msgs_generate_messages_eus.dir/build
 
 harderingros/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	cd /headless/ros_ws/build/harderingros && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/student/catkin_ws/build/harderingros && $(CMAKE_COMMAND) -P CMakeFiles/std_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : harderingros/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 
 harderingros/CMakeFiles/std_msgs_generate_messages_eus.dir/depend:
-	cd /headless/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /headless/ros_ws/src /headless/ros_ws/src/harderingros /headless/ros_ws/build /headless/ros_ws/build/harderingros /headless/ros_ws/build/harderingros/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/student/catkin_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/student/catkin_ws/src /home/student/catkin_ws/src/harderingros /home/student/catkin_ws/build /home/student/catkin_ws/build/harderingros /home/student/catkin_ws/build/harderingros/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : harderingros/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
 

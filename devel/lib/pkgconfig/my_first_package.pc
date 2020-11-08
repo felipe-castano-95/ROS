@@ -1,4 +1,4 @@
-prefix=/headless/ros_ws/devel
+prefix=/home/student/catkin_ws/devel
 
 Name: my_first_package
 Description: Description of my_first_package
