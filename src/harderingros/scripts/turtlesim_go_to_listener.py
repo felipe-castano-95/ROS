@@ -2,8 +2,17 @@
 
 import rospy
 from turtlesim.msg import Pose
+from geometry_msgs.msg import Twist
+
+def get_position(data):
+    rospy.loginfo(data)
+
+def calculate_next_step():
+    pass
 
 def callback(data):
+    steps = 10
+    ospy.Subscriber('turtle/pose', Pose, get_position)
     rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data)
 
 def listener():
