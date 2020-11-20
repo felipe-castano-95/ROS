@@ -2,7 +2,7 @@ import rospy
 from random import uniform
 from turtlesim.msg import Pose
 
-def turtlesim_go_to_talker():
+def talker():
     pub = rospy.Publisher('turtlesim_go_to_talker', Pose, queue_size=10)
     rospy.init_node('turtlesim_go_to_talker', anonymous=True)
     rate = rospy.Rate(0.1) # 10hz
@@ -23,6 +23,6 @@ def get_location():
 
 if __name__ == '__main__':
     try:
-        turtlesim_go_to_talker()
+        talker()
     except rospy.ROSInterruptException:
         pass
