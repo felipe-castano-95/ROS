@@ -37,18 +37,26 @@
 ## to the 'chatter' topic
 
 import rospy
-from std_msgs.msg import String
 from turtlesim.msg import Pose
 
 def turtlesim_goto():
-    pub = rospy.Publisher('turtlesim_goto', String, queue_size=10)
+    pub = rospy.Publisher('turtlesim_goto', Pose, queue_size=10)
     rospy.init_node('turtlesim_goto', anonymous=True)
     rate = rospy.Rate(0.1) # 10hz
     while not rospy.is_shutdown():
-        hello_str = "hello world %s" % rospy.get_time()
-        rospy.loginfo(hello_str)
-        pub.publish(hello_str)
+        pose_message = get_location()
+        rospy.loginfo(pose_message)
+        pub.publish(pose_message)
         rate.sleep()
+
+def get_location():
+    pose = Pose()
+    pose.x = uniform(0, 11.0) 
+    pose.y = uniform(0, 11.0) 
+    pose.theta = 0.0
+    pose.linear_velocity = 0.0
+    pose.angular_velocity = 0.0
+    return pose
 
 if __name__ == '__main__':
     try:
