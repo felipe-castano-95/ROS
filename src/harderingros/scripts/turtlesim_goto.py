@@ -37,6 +37,7 @@
 ## to the 'chatter' topic
 
 import rospy
+from random import uniform
 from turtlesim.msg import Pose
 
 def turtlesim_goto():
