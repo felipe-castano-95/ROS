@@ -12,12 +12,12 @@ def calculate_next_step():
 
 def callback(data):
     steps = 10
-    ospy.Subscriber('turtle/pose', Pose, get_position)
     rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data)
 
 def listener():
     rospy.init_node('turtlesim_go_to_listener', anonymous=True)
     rospy.Subscriber('turtlesim_go_to_talker', Pose, callback)
+    rospy.Subscriber('turtle/pose', Pose, get_position)
     rospy.spin()
 
 if __name__ == '__main__':
