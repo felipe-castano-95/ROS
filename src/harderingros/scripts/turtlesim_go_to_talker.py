@@ -6,8 +6,8 @@ from turtlesim.msg import Pose
 
 def get_location():
     pose = Pose()
-    pose.x = uniform(0, 11.0) 
-    pose.y = uniform(0, 11.0) 
+    pose.x = uniform(0, 11.09) 
+    pose.y = uniform(0, 11.09) 
     pose.theta = 0.0
     pose.linear_velocity = 0.0
     pose.angular_velocity = 0.0

@@ -17,7 +17,7 @@ def callback(data):
 def listener():
     rospy.init_node('turtlesim_go_to_listener', anonymous=True)
     rospy.Subscriber('turtlesim_go_to_talker', Pose, callback)
-    rospy.Subscriber('turtle/pose', Pose, get_position)
+    rospy.Subscriber('turtle/pose', Pose, get_position, callback)
     rospy.spin()
 
 if __name__ == '__main__':
