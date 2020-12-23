@@ -5,6 +5,7 @@ from turtlesim.msg import Pose
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from math import pow,atan2,sqrt
+
 import json
 from Crypto.Cipher import AES
 
@@ -17,6 +18,7 @@ tolerance = 1.5
 velocity_publisher = rospy.Publisher('/turtle1/cmd_vel', Twist, queue_size=10)
 
 def get_distance(goal_x, goal_y):
+	global pose
     distance = sqrt(pow((goal_x - pose.x), 2) + pow((goal_y - pose.y), 2))
     return distance
 
@@ -29,7 +31,6 @@ def get_position(data):
 	pose = data
 	pose.x = round(data.x, 2)
 	pose.y = round(data.y, 2)
-	#rospy.loginfo('I heard %s', data)
 
 def create_twist_message(distance, angle):
 	twist_msg = Twist()
@@ -45,9 +46,6 @@ def create_twist_message(distance, angle):
 
 def move(goal, rate):
 	global pose
-
-	rospy.loginfo("pose %s", pose)
-	rospy.loginfo("goal %s", goal)
 
 	angle = steering_angle(goal.x, goal.y)
 	distance = get_distance(goal.x, goal.y)
@@ -84,10 +82,9 @@ def message_to_pose(data):
 	return goal
 
 def callback(data, args):
-	rospy.loginfo("Termine %s", data)
-	goal = message_to_pose(json.loads(aes.decrypt(str(data.data))))
+	json_object = json.loads(aes.decrypt(str(data.data)))
+	goal = message_to_pose(json_object)
 	move(goal, args[0])
-	rospy.loginfo("Termine %s", goal)
 
 
 def listener():

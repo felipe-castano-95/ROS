@@ -27,10 +27,10 @@ def get_location():
 def talker():
     pub = rospy.Publisher('turtlesim_go_to_talker', String, queue_size=10)
     rospy.init_node('turtlesim_go_to_talker', anonymous=True)
-    rate = rospy.Rate(0.05) # 10hz
+    n = 0.05
+    rate = rospy.Rate(n) 
     while not rospy.is_shutdown():
         data_message = get_location()
-        rospy.loginfo(data_message)
         pub.publish(data_message)
         rate.sleep()
 
